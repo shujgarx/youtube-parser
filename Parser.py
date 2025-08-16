@@ -78,8 +78,8 @@ def get_stats_api(api_key: str, url_or_id: str) -> Dict[str, Any]:
         "channelTitle": sn.get("channelTitle"),
         "durationSec": iso8601_duration_to_seconds(cd.get("duration")),
         "viewCount": safe_int(st.get("viewCount")),
-        "likeCount": safe_int(st.get("likeCount")),      # может быть None
-        "commentCount": safe_int(st.get("commentCount")),# только число, без выгрузки
+        "likeCount": safe_int(st.get("likeCount")),      # may be None
+        "commentCount": safe_int(st.get("commentCount")),
         "thumbnails": sn.get("thumbnails"),
     }
 
@@ -104,7 +104,7 @@ def get_stats_scrape(url_or_id: str) -> Dict[str, Any]:
         "channelTitle": info.get("uploader"),
         "durationSec": info.get("duration"),
         "viewCount": info.get("view_count"),
-        "likeCount": info.get("like_count"),             # если доступно публично
+        "likeCount": info.get("like_count"),             # if public
         "commentCount": info.get("comment_count"),
         "thumbnails": info.get("thumbnails"),
     }
