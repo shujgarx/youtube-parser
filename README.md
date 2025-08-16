@@ -24,27 +24,11 @@
 Требования: **Python 3.8+**
 
 ```bash
-# 1) Клонируйте репозиторий
-git clone https://github.com/<your-username>/<your-repo>.git
-cd <your-repo>
-
-# 2) (рекомендуется) создайте виртуальное окружение
-python -m venv .venv
-# Windows: .venv\Scripts\activate
-# Linux/Mac:
-source .venv/bin/activate
-
-# 3) Установите зависимости
+#Установите зависимости
 pip install --upgrade pip
 pip install google-api-python-client yt-dlp
 ```
 
-> Можно оформить зависимости в `requirements.txt`:
->
-> ```
-> google-api-python-client>=2.0.0
-> yt-dlp>=2024.0.0
-> ```
 
 ---
 
